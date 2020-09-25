@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function triangular (){
+            if (document.getElementById(lado1) == document.getElementById(lado2) && document.getElementById(lado2) == document.getElementById(lado3)) {
+                document.write("Triángulo equilátero")
+            }
+            else if (document.getElementById(lado1) == document.getElementById(lado2) || document.getElementById(lado2) == document.getElementById(lado3) || document.getElementById(lado1) == document.getElementById(lado3)) {
+                document.write("Triángulo isósceles")
+            }
+            else{
+                document.write("Triángulo escaleno")
+            }
+        };
+    </script>
+</head>
+<body>
+    <h2> Calculador de triángulos</h2>
+
+    <label for="lado1">Longitud de lado 1</label>
+    <input type="text" id="lado1"><br>
+    <label for="lado2"> Longitud de lado 2</label>
+    <input type="text" id="lado2"><br>
+    <label for="lado3"> Longitud de lado 3</label>
+    <input type="text" id="lado3"><br>
+    <button type="button" onclick="triangular()">Calcular</button>
+</body>
+</html>
