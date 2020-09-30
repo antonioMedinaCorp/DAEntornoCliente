@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+    <script>
+
+        function gameLoop(){
+            var numPensado = Math.round(Math.random() * 100);
+            var tries = 0;
+            alert(numPensado);
+            do {
+
+                var numIntroducido = parseInt(prompt("Introduzca un número"));
+                if (numIntroducido > numPensado) {
+                    alert("El número buscado es menor")
+                }
+                else if(numIntroducido < numPensado){
+                    alert("El número buscado es mayor")
+                    
+                }
+                tries++;
+
+                if (tries == 2) {
+                    alert("HAS PERDIDO");
+                    return;
+                }
+            } while (numIntroducido != numPensado);
+            alert("Acertaste en "+ tries +" intentos");
+        }
+    </script>
+</head>
+<body>
+
+    <button id="boton" onclick="gameLoop()"> Jugar </i></button>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+    <script>
+        var ventana;
+        function abrir() {
+            ventana = window.open("", "myWindow", "width=200,height=100");
+            ventana.document.write("<p> Ventana abierta </p>");
+        }
+
+        function cerrar(){
+            ventana.close();
+        }
+    </script>
+</head>
+<body>
+    <p>La ventana se puede:</p>
+    <button id="botonAbrir" onclick="abrir()"> Abrir </i></button>
+    <button id="botonCerrar" onclick="cerrar()"> Cerrar </i></button>
+</body>
+</html>

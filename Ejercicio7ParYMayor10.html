@@ -7,9 +7,11 @@
     <script>
         function tabla() {
             let num = document.getElementById("number").value;
-            for (let i = 2; i <= 9; i++) {
-                document.write("<p> " + num + "x" + i+ "=" + num * i +"</p>")
-                
+            if ((num % 2 == 0) && (num > 10)) {
+                alert("NUMERO CORRECTO")
+            }
+            else{
+                alert("NUMERO INCORRECTO")
             }
         }
     </script>
