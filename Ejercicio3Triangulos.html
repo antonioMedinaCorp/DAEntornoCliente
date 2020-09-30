@@ -6,10 +6,11 @@
     <title>Document</title>
     <script>
         function triangular (){
-            if (document.getElementById(lado1) == document.getElementById(lado2) && document.getElementById(lado2) == document.getElementById(lado3)) {
+           // var lado1 = document.getElementById(lado1);
+            if (document.getElementById('lado1') == document.getElementById('lado2') && document.getElementById('lado2') == document.getElementById('lado3')) {
                 document.write("Triángulo equilátero")
             }
-            else if (document.getElementById(lado1) == document.getElementById(lado2) || document.getElementById(lado2) == document.getElementById(lado3) || document.getElementById(lado1) == document.getElementById(lado3)) {
+            else if (document.getElementById('lado1') == document.getElementById('lado2') || document.getElementById('lado2') == document.getElementById('lado3') || document.getElementById('lado1') == document.getElementById('lado3')) {
                 document.write("Triángulo isósceles")
             }
             else{
