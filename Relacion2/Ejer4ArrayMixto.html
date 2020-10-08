@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer 4</title>
+    <script>
+        var array = [6, "pepe", 2, "juan"];
+        var numeros = [];
+        var nombres = [];
+        array.forEach(element => {
+            if (Number.isInteger(element)) {
+                numeros.push(element);
+            }
+            else{
+                nombres.push(element);
+            }
+        });
+
+        if (nombres[0].length > nombres[1].length) {
+            document.write(nombres[0] + " es más largo.")
+        } else {
+            document.write(nombres[1] + " es más largo.")
+        }
+
+        document.write("<br>")
+        document.writeln(numeros[0]+numeros[1]);
+        document.writeln(numeros[0]-numeros[1]);
+        document.writeln(numeros[0]*numeros[1]);
+        document.writeln(numeros[0]/numeros[1]);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

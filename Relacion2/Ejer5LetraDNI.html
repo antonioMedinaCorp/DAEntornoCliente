@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer 5</title>
+    <script>
+        var letras = ['T', 'R', 'W', 'A', 'G', 'M', 'Y', 'F', 'P', 'D', 'X', 'B', 'N', 'J', 'Z', 'S', 'Q', 'V', 'H',
+            'L', 'C', 'K', 'E', 'T'
+        ];
+
+        function getLetra() {
+            alert(letras[document.getElementById("SinLetra").value % 23])
+        }
+
+        function checkLetra() {
+            var input = document.getElementById("ConLetra").value;
+            let dniNum = parseInt(input.slice(0,input.length - 1)) ;
+            if (letras[dniNum % 23] == input.slice(8) ) {
+                alert("Letra correcta")
+            }
+            else{
+                alert("gitgut casul")
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <input type="number" id="SinLetra">
+    <button type="submit" onclick="getLetra()">Calcular letra</button>
+    <br><br>
+    <input type="text" id="ConLetra">
+    <button type="submit" onclick="checkLetra()">Comprobar letra</button>
+
+</body>
+
+</html>
