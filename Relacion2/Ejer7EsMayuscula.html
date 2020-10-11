@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer 7</title>
+    <script>
+        function isMayuscula(text) {
+            var i = 0;
+            var char = '';
+            var hayMayus = false;
+            var hayMinus = false;
+            while (i <= text.length) {
+                char = text.charAt(i);
+                if (char == char.toUpperCase()) {
+                    hayMayus = true;
+                    break;
+                }
+                if (char == char.toLowerCase()) {
+                    hayMinus = true;
+                    
+                }
+                i++;
+
+            }
+
+            if (hayMayus && hayMinus) {
+                alert("Mezcla de mayúsculas y minúsculas")
+            } else {
+                if (hayMayus) {
+                    alert("Es solo de mayúsculas");
+                } else {
+                    alert("Es solo de minúsculas");
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <button onclick="isMayuscula('holbuenastardes')">Frase</button>
+</body>
+
+</html>

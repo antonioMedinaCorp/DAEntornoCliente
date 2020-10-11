@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejer 6</title>
+    <script>
+        function getMenor() {
+            var i;
+            var min = +Infinity;
+            for (i = 0; i < arguments.length; i++) {
+                if (min > arguments[i]) {
+                    min = arguments[i];
+                }
+                
+            }
+            alert("El menor es " + min);
+        }
+    </script>
+</head>
+<body>
+    <button onclick="getMenor(10, 58, 4)">Mostrar menor</button>
+</body>
+</html>
