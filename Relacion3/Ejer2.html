@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Empresa {
+            constructor(nombre, direccion, telefono, nif) {
+                this.nombre = nombre;
+                this.direccion = direccion;
+                this.telefono = telefono;
+                this.nif = nif;
+            }
+        }
+
+        class Cliente {
+            constructor(nCliente, dni, nombre, domicilio, cp, ciudad, provincia) {
+                this.nCliente = nCliente;
+                this.dni = dni;
+                this.nombre = nombre;
+                this.domicilio = domicilio;
+                this.cp = cp;
+                this.ciudad = ciudad;
+                this.provincia = provincia;
+
+            }
+        }
+
+        class Producto {
+            constructor(descripcion, precio, cantidad) {
+                this.descripcion = descripcion;
+                this.precio = precio;
+                this.cantidad = cantidad;
+            }
+        }
+
+        class Factura {
+            constructor(Empresa, Cliente, productos, formaPago) {
+                this.Empresa = Empresa;
+                this.Cliente = Cliente;
+                this.productos = productos;
+                this.importeTotal = 0;
+                this.formaPago = formaPago;
+            }
+
+            getImporteTotal() {
+                let importe = 0;
+                this.productos.forEach(element => {
+                    importe += (element.precio * element.cantidad);
+                    this.importeTotal = importe;
+                });
+            }
+
+
+        }
+
+         (function () {
+            
+            var productos = [new Producto("Puerta", 10, 2), new Producto("ventana", 27, 3), new Producto("mesa", 30, 1)];
+
+
+            facturilla = new Factura(new Empresa("Empresa", "Donde sea", 987654321, "46513285e"),
+            new Cliente("3", "98732165e", "Francisco", "Calle de su casa", "14960", "Zambra", "Córdoba"),
+            productos, "Tarjeta");
+            facturilla.getImporteTotal();
+
+            document.write("El importe total de la facturilla es "+ facturilla.importeTotal + "€, gracias por su compra.");
+        })();
+    </script>
+
+</head>
+
+<body>
+
+</body>
+
+</html>

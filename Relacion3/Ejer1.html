@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+    <script>
+        var dia = ["Domingo", "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado"];
+        var mes = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre",
+            "Noviembre", "Diciembre"
+        ];
+       function getFecha() {
+            var dateobj = new Date();
+            let diaMes = dateobj.getDate();
+            let mesAnyo = dateobj.getMonth();
+            let anyo = dateobj.getFullYear();
+            let cuatri
+
+            if (mes <=3) {
+                cuatri = "primer";
+            }
+            else if (mes <= 7) {
+                cuatri = "segund";
+            }
+            else{
+                cuatri = "tercer";
+            }
+
+            document.write("Estamos en el día " + diaMes + ", " + dia[dateobj.getDay()] +
+                " del mes " + mes[mesAnyo] + " " + cuatri +" cuatrimestre del año " + anyo);
+
+        }
+    </script>
+
+</head>
+
+<body>
+    <BUTton onclick="getFecha()">Fecha</BUTton>
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script>
+        class Circunferencia{
+            constructor(radio){
+                this.radio = radio;
+            }
+
+             getArea() {
+                return Math.PI* Math.pow(this.radio, 2);
+            }
+
+            getLongitud(){
+                return 2*Math.PI*this.radio;
+            }
+        }
+
+        (function () {
+            reonda = new Circunferencia(5);
+            document.write("La circunferencia de " + reonda.radio +"cm de radio tiene " + Math.round( reonda.getArea()) + "cm2 de área y " + Math.round( reonda.getLongitud()) +"cm de perímetro. ")
+        })();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
