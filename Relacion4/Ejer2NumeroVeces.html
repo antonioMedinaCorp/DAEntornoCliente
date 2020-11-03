@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+    <script>
+        contar = (str, palabra) => {
+            var split = str.split(" ");
+            var count = 0;
+            split.forEach(element => {
+                if (element == palabra) {
+                    count++;
+                }
+            });
+
+            document.write("La palabra " + palabra + " se repite " + count + " veces.")
+        }
+    </script>
+</head>
+
+<body>
+
+    <button onclick="contar('buenas tardes buenas', 'buenas')">cuenta a ver</button>
+</body>
+
+</html>

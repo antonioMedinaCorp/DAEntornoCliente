@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+    <script>
+        contar = (num) => {
+            var numero = num.split("");
+            var reverse = num.split("").reverse();
+
+            var bool = true;
+            for (let i = 0; i < numero.length; i++) {
+                ;
+                if (numero[i] != reverse[i]) {
+                    bool = false;
+                }
+            }
+            
+            if (bool) {
+                document.getElementById("solucion").innerHTML = "Es Capicúa";
+            }
+            else{
+                document.getElementById("solucion").innerHTML = "No es capicúa";
+            }
+            
+
+        }
+    </script>
+</head>
+<body>
+
+    Introduzca numero<br>
+    <input type="text" id="cadena"><br>
+
+
+    <button id="button" onclick="contar(document.getElementById('cadena').value)">Calcular</button>
+    <p id="solucion"></p>
+</body>
+</html>

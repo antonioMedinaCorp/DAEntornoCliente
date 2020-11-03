@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio2</title>
+    <script>
+        contar = (str, palabra) => {
+            var split = str.replace(`/${palabra}/g`, '');
+
+            document.getElementById("solucion").innerHTML = split;
+
+
+        }
+    </script>
+</head>
+<body>
+
+    Introduzca cadena<br>
+    <input type="text" id="cadena"><br>
+    Cadena a borrar<br>
+    <input type="text" id="borrar"><br><br>
+
+
+    <button id="button" onclick="contar(document.getElementById('cadena').value, document.getElementById('borrar').value)">Delete</button>
+    <p id="solucion"></p>
+</body>
+</html>

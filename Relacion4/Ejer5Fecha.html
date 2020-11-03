@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+    <script>
+        contar = (fecha) => {
+            var fechaActual = Date.now();
+            console.log(fechaActual)
+            var fechaDada = new Date(fecha);
+            
+            console.log(fechaDada.getTime());
+            var diferencia = Math.abs(fechaDada - fechaActual);
+            console.log(diferencia);
+            var años = diferencia /1000 / 60 / 60 / 24 / 30/ 365;
+        
+
+            document.getElementById("solucion").innerHTML = años;
+            
+
+        }
+    </script>
+</head>
+<body>
+
+    Introduzca numero<br>
+    <input type="date" id="cadena"><br>
+
+
+    <button id="button" onclick="contar(document.getElementById('cadena').value)">Calcular</button>
+    <p id="solucion"></p>
+</body>
+</html>
