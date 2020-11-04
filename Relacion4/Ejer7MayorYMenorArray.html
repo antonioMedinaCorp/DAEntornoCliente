@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+    <script>
+        getSolucion = () => {
+            array = getMayoryMenor(getArray());
+
+            console.log('Solución:')
+            array.forEach(element => {
+                console.log(element);
+            });
+        }
+
+        getArray = () => {
+            var valores = [...document.querySelectorAll("input.number")];
+            let arrayLocal = [];
+           for (let i = 0; i < valores.length; i++) {
+               arrayLocal.push(valores[i].value) ;
+           }
+
+            return arrayLocal;
+
+
+        }
+
+        getMayoryMenor = (array) => {
+            mayor = -Infinity;
+            menor = Infinity;
+
+            array.forEach(element => {
+                if (element > mayor) {
+                    mayor = element;
+                }
+                if (element < menor) {
+                    menor = element;
+                }
+            });
+
+            menorYMayor = [menor, mayor];
+
+            return menorYMayor;
+        }
+    </script>
+</head>
+
+<body>
+
+    Introduzca números<br>
+    <input type="text" id="a" class="number"><br>
+    <input type="text" id="b" class="number"><br>
+    <input type="text" id="c" class="number"><br>
+    <input type="text" id="d" class="number"><br>
+
+
+    <button id="button" onclick="getSolucion()  ">Calcular</button>
+    <p id="solucion"></p>
+</body>
+
+</html>

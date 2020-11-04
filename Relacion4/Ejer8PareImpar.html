@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio4</title>
+    <script>
+        function getFirstArray() {
+            return [3, 5,3,8,6];
+        }
+        contar = (cadena) => {
+           var arrays = {
+               ascendente: [],
+               descendente: []
+           }
+          
+
+            cadena.forEach(element => {
+                if (element % 2 == 0) {
+                    numeros.pares.push(element);
+                }
+                else{
+                    numeros.impares.push(element);
+                }
+            });
+            console.log('Array de números pares')
+            numeros.pares.forEach(element => {
+                console.log(element);
+            });
+
+            console.log('Array de números impares')
+            numeros.impares.forEach(element => {
+                console.log(element);
+            });
+
+        }
+    </script>
+</head>
+<body>
+
+    Pulse y mire la consola<br>
+    <br>
+
+
+    <button id="button" onclick="contar(getFirstArray())">Calcular</button>
+    <p id="solucion"></p>
+</body>
+</html>
