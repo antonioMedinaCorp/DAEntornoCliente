@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function buscar(str){
+            console.log(str);
+            var parrafo= document.querySelector("p");
+            if(parrafo.innerHTML.indexOf(str) != 1){
+                var apariciones= new RegExp(str, "g");
+                parrafo.innerHTML=parrafo.innerHTML.replace(apariciones, '<mark>'+str+'</mark>')
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1>lorem ipsum</h1>
+    <p id="texto">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam a tempor orci. Nulla aliquam nunc id metus
+        tristique, sit amet consectetur turpis maximus. In tempor eget ante sed venenatis. Etiam eleifend mi sit amet
+        finibus venenatis. Suspendisse auctor justo purus, ut maximus lacus pretium eu. Pellentesque nibh urna, sagittis
+        eu egestas a, dignissim sit amet tellus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+        posuere cubilia curae; Vestibulum at mi massa. Sed nec risus accumsan sapien finibus convallis ac vel ipsum.
+
+        Duis egestas est non leo blandit, eget suscipit purus venenatis. Nam tempor ante at nunc ornare, sit amet
+        blandit ipsum tristique. Pellentesque sed tincidunt ex. Donec non lobortis diam. Mauris vitae libero vel nibh
+        molestie interdum eu eget odio. Mauris vulputate, lacus at scelerisque suscipit, turpis odio gravida tortor, id
+        suscipit elit lorem iaculis lacus. Nunc ultrices nisi sed urna faucibus vulputate. Nulla ullamcorper auctor
+        ornare. Vivamus id condimentum enim. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sagittis
+        id lacus eu mollis. In quis turpis ac ante gravida mattis. Maecenas nec justo porta, interdum odio quis,
+        ultrices arcu. Aliquam sit amet urna id mi vestibulum rhoncus.
+
+        In hac habitasse platea dictumst. Aliquam et felis eu erat eleifend pulvinar sit amet a eros. Aenean tortor
+        lacus, tempus eget enim interdum, posuere volutpat nulla. Fusce efficitur ante vel urna cursus consequat.
+        Maecenas mollis tempor tellus, quis ullamcorper sapien porta id. Nam ultricies mi nec porta rhoncus.
+        Pellentesque in lacus felis. Vestibulum arcu urna, tempus eu dictum vitae, viverra in ipsum. Aliquam vulputate
+        sagittis auctor.
+    </p>
+    <label for="textoABuscar">Texto a buscar</label><br>
+    <input type="text" id="textoABuscar">
+    <button type="button" onclick="buscar(document.getElementById('textoABuscar').value)">Buscar</button>
+
+
+</body>
+
+</html>
