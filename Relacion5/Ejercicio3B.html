@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+    <script>
+
+        function ejercicioA() {
+            let liArray = document.querySelectorAll('li');
+            console.log(liArray);
+
+            let textoACambiar = document.getElementById('textoACambiar').value;
+            let numLi = document.getElementById('numLi').value - 1;
+            console.log(numLi);
+            console.log(textoACambiar);
+            liArray[numLi].innerHTML = textoACambiar;
+
+
+
+            /* Ocultar botones*/
+            //Seleccionar todos los botones
+            let buttonArray = document.querySelectorAll('button');
+
+
+            //add parameter para ocultarlos
+            buttonArray.forEach(element => {
+                element.setAttribute('style', 'display: none;')
+            });
+
+        }
+
+        function validar(numero) {
+            if (numero > 9 || numero < 1) {
+                alert('Introduzca un número entre 1 y 9');
+            }
+            else {
+                ejercicioA()
+            }
+        }
+
+        function borrar(){
+             /* Ocultar botones*/
+            //Seleccionar todos los botones
+            let inputArray = document.querySelectorAll('input');
+
+            inputArray.forEach(element => {
+                element.value = "";
+            });
+        }
+
+    </script>
+</head>
+
+<body>
+    <ol>
+        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae recusandae quos obcaecati dolorem consectetur
+            commodi debitis quo, modi autem, provident fuga incidunt molestias earum praesentium officia unde nam
+            adipisci cumque!</li>
+        <li>Error ab fugit earum corrupti, aliquid voluptatum assumenda quis aspernatur cum voluptates ex deleniti
+            recusandae obcaecati cumque? Provident odit doloremque cumque quas soluta rem ipsum corrupti voluptatum
+            officia esse? Dolore.</li>
+        <li>Fuga laudantium accusantium quis aut, tempore magnam non error aperiam. Repudiandae incidunt omnis veritatis
+            distinctio quam! Libero cupiditate voluptas consequatur temporibus aliquam harum veritatis fugit
+            reprehenderit laudantium eos! At, molestias.</li>
+        <li>Sequi eum tempora tempore quibusdam saepe ipsam fugit voluptates sapiente, corrupti amet odit id atque
+            dolore assumenda delectus ut possimus dolor in debitis explicabo vitae. Maxime obcaecati ipsa laudantium
+            asperiores.</li>
+        <li>Est enim, praesentium exercitationem cupiditate mollitia alias odio totam ea ab dolorum ex facilis.
+            Voluptate officiis nam architecto consequuntur minima beatae facilis maxime dolores mollitia eaque, repellat
+            fugit dolore dignissimos.</li>
+        <li>Asperiores dicta ullam optio cupiditate cum fugiat suscipit architecto! Quasi quaerat incidunt, harum
+            necessitatibus, nostrum eius nesciunt excepturi omnis, iure velit minus ex recusandae sequi illum voluptatem
+            inventore illo iste.</li>
+        <li>Nam obcaecati maxime vel sit reiciendis minus quisquam nesciunt officia adipisci rem, quibusdam velit quia
+            quasi rerum quae suscipit nisi? Ipsa magnam in delectus modi. Laudantium obcaecati sequi repudiandae sed.
+        </li>
+        <li>Adipisci, sequi dolor. Sequi et excepturi, ipsam aut dolorum provident? Ea voluptates harum ipsum eveniet
+            odit. Tempora ullam reprehenderit quo molestiae ab aliquam iure perferendis excepturi! Laborum maxime totam
+            modi.</li>
+        <li>Unde vero delectus sequi similique natus rem debitis architecto culpa quis dignissimos, quidem ipsum modi
+            tempora enim quae aspernatur est, aut corrupti consequuntur obcaecati fuga sunt. Corrupti porro temporibus
+            quidem?</li>
+    </ol>
+
+    <label for="textoACambiar">Texto a Introducir</label><br>
+    <input type="text" id="textoACambiar"> <br>
+    <label for="numLi">Número de párrafo</label><br>
+    <input type="text" id="numLi">
+    <button type="button" onclick="validar(document.getElementById('numLi').value)">Buscar</button>
+    <button type="button" onclick="borrar()">Borrar</button>
+</body>
+
+</html>
