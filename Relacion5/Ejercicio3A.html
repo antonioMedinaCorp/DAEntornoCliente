@@ -8,14 +8,14 @@
     <script>
 
         function ejercicioA() {
+            let olNode = document.querySelector('ol');
             let liArray = document.querySelectorAll('li');
             console.log(liArray);
+            let newNode = document.createElement('li');
+            newNode.textContent = document.getElementById('textoACambiar').value;
+            liReferenced = liArray[document.getElementById('numLi').value];
+            olNode.insertBefore(newNode, liReferenced  );
 
-            let textoACambiar = document.getElementById('textoACambiar').value;
-            let numLi = document.getElementById('numLi').value -1;
-            console.log(numLi);
-            console.log(textoACambiar);
-            liArray[numLi].innerHTML = textoACambiar;
 
         }
 

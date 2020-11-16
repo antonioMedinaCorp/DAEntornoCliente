@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //document.onkeydown = checkKey;
+        document.addEventListener('keydown', checkKey);
+
+        function checkKey(e) {
+
+            e = e || window.event;
+            let velocidadNode = document.querySelector('#velocidad');
+            let velocidadValue = parseInt(velocidadNode.value);
+            console.log(velocidadNode);
+            console.log(velocidadValue);
+            
+            if (e.keyCode == '38') {
+                // up arrow
+                velocidadValue++;
+                velocidadNode.value = velocidadValue;
+            }
+            else if (e.keyCode == '40') {
+                // down arrow
+                velocidadValue--;
+                velocidadNode.value = velocidadValue;
+            }
+            else if (e.keyCode == '37') {
+                // left arrow
+            }
+            else if (e.keyCode == '39') {
+                // right arrow
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <p>
+        Velocidad:
+    </p>
+    <input type="number" id="velocidad" value="0" disabled>
+</body>
+
+</html>

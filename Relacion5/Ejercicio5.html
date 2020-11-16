@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+    <style>
+        body{
+            background: black;
+        }
+        #cuadrado{
+            background-color: yellow;
+            margin:  0 auto;
+            padding: 0 auto;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <script>
+            const onMouseOver = (e) => {
+            
+            document.body.style.backgroundImage = "url('https://source.unsplash.com/random')";
+        }
+
+        document.addEventListener('mouseover', onMouseOver);
+
+    </script>
+</head>
+<body>
+    <div id="cuadrado">
+        Mueva el cursor a esta zona para insertar imagen
+    </div>
+</body>
+</html>
