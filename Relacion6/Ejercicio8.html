@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <h3>Conversor</h3>
+    
+    Kg: <input type="text" id="kg" onclick="clean('g')" > <button type="submit"> Convertir peso</button> g: <input type="text" id="g" onclick="clean('kg')">
+    <hr> 
+
+    <script>
+        function clean(idDelOtro) {
+            id = "#"+ idDelOtro;
+            document.querySelector(id).value = "";
+        };
+
+        function translate() {
+            kgValue = document.querySelector("#kg").value;
+            gValue = document.querySelector("#g").value;
+
+            // si la bandera está a true, el campo kg está vacío,
+            // la conversión 
+            var flag = true;
+            
+            if (kgValue = "") {
+                flag = false
+            }
+
+            if (condition) {
+                
+            } else {
+                
+            }
+        }
+    </script>
+</body>
+</html>

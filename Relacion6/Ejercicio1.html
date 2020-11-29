@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio1</title>
+    <script>
+       function enviar(){
+           user = document.querySelector('#usuario').value;
+           pass = document.querySelector('#password').value;
+            
+            if (user == 'admin' && pass == '1234') {
+                document.write('bienvenido al sistema')
+            }
+            else{
+                document.write('Fallo de autenticación')
+            }
+        
+        }
+        
+    </script>
+</head>
+<body>
+    <h1>BIENVENIDO AL SISTEMA </h1>
+
+    usuario: <input type="text" id="usuario"><br>
+    clave: <input type="password" id="password">
+    <button type="submit" name="enviar" onclick="enviar()">Enviar</button>
+    <button type="submit" name="limpiar">Limpiar</button>
+</body>
+</html>
