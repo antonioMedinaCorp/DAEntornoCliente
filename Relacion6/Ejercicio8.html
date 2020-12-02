@@ -8,7 +8,7 @@
 <body>
     <h3>Conversor</h3>
     
-    Kg: <input type="text" id="kg" onclick="clean('g')" > <button type="submit"> Convertir peso</button> g: <input type="text" id="g" onclick="clean('kg')">
+    Kg: <input type="text" id="kg" onclick="clean('g')" > <button type="submit" onclick="cambio()"> Convertir peso</button> g: <input type="text" id="g" onclick="clean('kg')">
     <hr> 
 
     <script>
@@ -17,22 +17,24 @@
             document.querySelector(id).value = "";
         };
 
-        function translate() {
-            kgValue = document.querySelector("#kg").value;
-            gValue = document.querySelector("#g").value;
+        function cambio() {
 
-            // si la bandera está a true, el campo kg está vacío,
-            // la conversión 
+            kgValue = document.querySelector("#kg");
+            gValue = document.querySelector("#g");
+
+            // si la bandera está a true, el campo g está vacío, y viceversa
+            // la conversión se realiza hacia el campo vacío
             var flag = true;
             
-            if (kgValue = "") {
+            if (kgValue.value == "") {
                 flag = false
             }
 
-            if (condition) {
-                
+
+            if (flag) {
+                gValue.value = kgValue.value  * 1000;
             } else {
-                
+                kgValue.value = gValue.value / 1000
             }
         }
     </script>
