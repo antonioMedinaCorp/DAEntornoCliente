@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+    <script>
+        var ventana = () =>{
+
+            muchoTexto = document.querySelector("#muchoTexto").value;
+
+            let wordArray = muchoTexto.split(" ");
+            
+
+            let reverseWordArray = wordArray.reverse();
+
+            let sortedWordArray = wordArray.sort();
+            console.log(sortedWordArray);
+
+
+
+            var ventana = window.open()
+
+            ventana.document.writeln("<h3>Info sobre el texto introducido:</h3>");
+            ventana.document.writeln("<p>Número de palabas:</p>"+wordArray.length);
+            ventana.document.writeln("<p>Primera palabra:</p>" +wordArray[wordArray.length - 1] );
+            ventana.document.writeln("<p>Última palabra:</p>" + wordArray[0]);
+            ventana.document.writeln("<p>Al revés:</p>");
+            ventana.document.writeln(reverseWordArray);
+            ventana.document.writeln("<p>Alfabéticamente:</p>");
+            ventana.document.writeln(sortedWordArray);
+            ventana.document.writeln("<p>z-a:</p>");
+            ventana.document.writeln(sortedWordArray.reverse());
+            
+        }
+    </script>
+</head>
+<body style="background-color: lightgray;">
+    <textarea id="muchoTexto"></textarea>
+    <br>
+    <button onclick="ventana()">Enviar</button>
+</body>
+</html>
