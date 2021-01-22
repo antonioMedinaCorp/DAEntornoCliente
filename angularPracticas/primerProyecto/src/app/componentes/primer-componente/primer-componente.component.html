@@ -1,0 +1,9 @@
+<h1>primer-componente</h1>
+
+Módulo {{modulo}}<br>
+Descripción: {{descripcion}}<br>
+
+Módulo: <input type="text" name="" [value]="modulo"><br>
+Descripcion: <input type="text" [value]="descripcion"><br>
+Profesor: <input #profesor type="text">
+<button (click)="mostrarProfesor(profesor.value)">Enviar</button>
